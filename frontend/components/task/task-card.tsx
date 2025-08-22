@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { CategoryBadge, CategoryBadgeSmall } from "@/components/ui/category-badge"
 import { DueDateIndicator } from "@/components/ui/due-date-indicator"
-import { getPriorityColor, getPriorityLabel } from "@/lib/utils"
-import { cn } from "@/lib/utils"
+import { getPriorityColor, getPriorityLabel } from "../../lib/utils"
+import { cn } from "../../lib/utils"
 import { Edit, Trash2, GripVertical } from "lucide-react"
 
 interface TaskCardProps {

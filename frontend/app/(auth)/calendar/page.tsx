@@ -1,13 +1,13 @@
 'use client'
 
-import DueDateCalendarView from '@/components/features/due-date-calendar-view'
-import TaskForm from '@/components/task/task-form'
-import { useCreateTask, useUpdateTask } from '@/hooks'
-import { useToast } from '@/lib/use-toast'
+import DueDateCalendarView from '../../../components/features/due-date-calendar-view'
+import TaskForm from '../../../components/task/task-form'
+import { useCreateTask, useUpdateTask } from '../../../hooks'
+import { useToast } from '../../../lib/use-toast'
 import { useState } from 'react'
-import type { TaskCreate, TaskUpdate } from '@/types/task'
-import { Task } from '@/types/task'
-import { Button } from '@/components/ui/button'
+import type { TaskCreate, TaskUpdate } from '../../../types/task'
+import { Task } from '../../../types/task'
+import { Button } from '../../../components/ui/button'
 import { X } from 'lucide-react'
 
 export default function CalendarPage() {

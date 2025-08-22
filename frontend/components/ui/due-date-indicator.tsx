@@ -1,5 +1,5 @@
-import { formatDueDate, getDueDateColor, getDueDateStatus } from "@/lib/utils"
-import { cn } from "@/lib/utils"
+import { formatDueDate, getDueDateColor, getDueDateStatus } from "../../lib/utils"
+import { cn } from "../../lib/utils"
 import { Calendar, Clock, AlertTriangle, CheckCircle } from "lucide-react"
 
 interface DueDateIndicatorProps {

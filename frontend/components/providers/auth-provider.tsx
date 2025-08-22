@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react'
 import { User } from '@/types/task'
-import { authApi } from '@/lib/api'
+import { authApi } from '../../lib/api'
 
 interface AuthContextType {
   user: User | null

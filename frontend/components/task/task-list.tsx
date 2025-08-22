@@ -19,7 +19,7 @@ import {
 import { Task } from "@/types/task"
 import TaskCard from "@/components/task/task-card"
 import SortableTaskCard from "@/components/features/sortable-task-card"
-import { taskApi } from "@/lib/api"
+import { taskApi } from "../../lib/api"
 
 interface TaskListProps {
   tasks: Task[]

@@ -23,14 +23,14 @@ import { restrictToVerticalAxis } from '@dnd-kit/modifiers'
 import { Task } from '@/types/task'
 import { TaskFilters } from '@/types/task'
 import { useTasks, useToggleTask, useDeleteTask } from '@/hooks'
-import { useDragAndDropState, useKeyboardDragAndDrop } from '@/lib/dnd-state'
-import { useToast } from '@/lib/use-toast'
+import { useDragAndDropState, useKeyboardDragAndDrop } from '../../lib/dnd-state'
+import { useToast } from '../../lib/use-toast'
 import { useAuth } from '@/components/providers/auth-provider'
 import SortableTaskCard from './sortable-task-card'
 import TaskCard from '@/components/task/task-card'
 import { Button } from '@/components/ui/button'
 import { Loader2, AlertCircle, RefreshCw } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { cn } from '../../lib/utils'
 
 interface EnhancedTaskListProps {
   filters: TaskFilters
