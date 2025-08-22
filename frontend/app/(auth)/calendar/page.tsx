@@ -37,32 +37,13 @@ export default function CalendarPage() {
       }
       setShowForm(false)
       setEditingTask(null)
-    } catch (error: any) {
+    } catch (error) {
+      toast({
+        title: editingTask ? "Update failed" : "Creation failed",
+        description: `Failed to ${editingTask ? 'update' : 'create'} task. Please try again.`,
+        variant: "destructive",
+      })
       console.error('Task operation failed:', error)
-      
-      // Handle specific error cases
-      if (error?.response?.status === 409) {
-        // Duplicate task title error
-        toast({
-          title: "Duplicate Task Title",
-          description: "A task with this title already exists. Please use a different title or add a number/description to make it unique.",
-          variant: "destructive",
-        })
-      } else if (error?.response?.status === 400) {
-        // Bad request error (e.g., invalid priority)
-        toast({
-          title: "Invalid Task Data",
-          description: error?.response?.data?.detail || "Please check your task data and try again.",
-          variant: "destructive",
-        })
-      } else {
-        // Generic error
-        toast({
-          title: editingTask ? "Update failed" : "Creation failed",
-          description: `Failed to ${editingTask ? 'update' : 'create'} task. Please try again.`,
-          variant: "destructive",
-        })
-      }
     }
   }
 
@@ -112,7 +93,6 @@ export default function CalendarPage() {
               
               <TaskForm
                 task={editingTask || undefined}
-                editingTask={editingTask}
                 onSubmit={handleTaskSubmit}
                 onCancel={handleFormCancel}
                 isLoading={createTaskMutation.isPending || updateTaskMutation.isPending}
