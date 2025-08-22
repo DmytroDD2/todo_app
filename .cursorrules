@@ -1,0 +1,83 @@
+# TODO App - Cursor AI Rules
+
+## Tech Stack Context
+- Backend: Python FastAPI with SQLAlchemy
+- Frontend: React with Next.js 14+ (App Router)
+- Styling: Tailwind CSS + shadcn/ui components
+- Database: PostgreSQL
+- Language: TypeScript for frontend, Python for backend
+- Package Manager: npm for frontend, pip for backend
+- Additional Libraries: @dnd-kit/core for drag-and-drop, date-fns for date handling
+
+## Code Style & Standards
+- Use TypeScript strict mode
+- Follow PEP 8 for Python code
+- Use functional components with hooks in React
+- Prefer composition over inheritance
+- Use descriptive variable and function names
+- Add JSDoc comments for complex functions
+- Include error handling in all API calls
+
+## File Organization
+- Keep components small and focused (max 200 lines)
+- Use index.ts files for clean imports
+- Separate types into dedicated .types.ts files
+- Create custom hooks for reusable logic
+- Use absolute imports with @ alias
+
+## Database & API Patterns
+- Use Pydantic models for API schemas
+- Implement proper HTTP status codes
+- Add input validation for all endpoints
+- Use async/await for database operations
+- Include proper error messages in responses
+- Follow RESTful API conventions
+
+## Frontend Patterns
+- Use React Query for server state management
+- Implement loading and error states
+- Create reusable UI components
+- Use Tailwind utility classes, avoid custom CSS
+- Implement proper TypeScript interfaces
+- Use Next.js App Router patterns
+- Use @dnd-kit/core for drag-and-drop functionality
+- Implement date handling with date-fns library
+- Use shadcn/ui Calendar and DatePicker components
+
+## Security & Best Practices
+- Validate all user inputs
+- Use environment variables for secrets
+- Implement proper error boundaries
+- Add CORS configuration
+- Use prepared statements for database queries
+- Follow OWASP security guidelines
+
+## Testing Requirements
+- Write unit tests for utility functions
+- Test API endpoints with proper mocking
+- Include error case testing
+- Test component rendering and interactions
+
+## Documentation Standards
+- Include README with setup instructions
+- Document API endpoints with examples
+- Add inline comments for complex logic
+- Create component documentation with props
+- Include deployment instructions
+
+## When Generating Code:
+1. Always include proper TypeScript types
+2. Add error handling and loading states
+3. Follow the established folder structure
+4. Use the specified UI component library
+5. Include relevant imports and exports
+6. Add basic JSDoc comments for functions
+7. Consider accessibility in UI components
+8. Optimize for performance where applicable
+
+## Response Format:
+- Provide complete, working code
+- Include file paths and structure
+- Add setup/usage instructions
+- Explain complex logic with comments
+- Suggest improvements or alternatives when relevant
