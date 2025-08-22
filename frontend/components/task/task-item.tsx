@@ -4,8 +4,8 @@ import { Task } from '@/types/task'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Trash2, Calendar } from 'lucide-react'
-import { formatDueDate, getPriorityColor, getPriorityLabel } from '../../lib/utils'
-import { cn } from '../../lib/utils'
+import { formatDueDate, getPriorityColor, getPriorityLabel } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 
 interface TaskItemProps {
   task: Task

@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { useAuth } from '@/components/providers/auth-provider'
-import { useToast } from '../../lib/use-toast'
+import { useToast } from '@/lib/use-toast'
 import { UserCreate } from '@/types/task'
 
 export default function RegisterForm() {

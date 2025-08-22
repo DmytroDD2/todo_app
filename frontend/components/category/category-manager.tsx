@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CategoryBadge } from "@/components/ui/category-badge"
 import { Edit, Trash2, Plus, X } from "lucide-react"
-import { cn } from "../../lib/utils"
+import { cn } from "@/lib/utils"
 
 interface CategoryManagerProps {
   className?: string
