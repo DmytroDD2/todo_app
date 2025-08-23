@@ -56,6 +56,36 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Mobile-specific improvements */
+  input, button, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Better touch targets for mobile */
+  button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve form spacing on mobile */
+  @media (max-width: 640px) {
+    .space-y-2 > * + * {
+      margin-top: 0.75rem;
+    }
+    
+    .space-y-3 > * + * {
+      margin-top: 1rem;
+    }
+    
+    .space-y-4 > * + * {
+      margin-top: 1.25rem;
+    }
+    
+    .space-y-5 > * + * {
+      margin-top: 1.5rem;
+    }
+  }
 }
 
 @layer utilities {
