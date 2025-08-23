@@ -74,21 +74,46 @@
     min-width: unset !important;
   }
   
-  /* Ensure checkboxes have proper sizing */
-  [data-radix-checkbox] {
-    width: 20px !important;
-    height: 20px !important;
+  /* Ensure checkboxes have proper sizing - HIGH SPECIFICITY */
+  div[data-radix-checkbox],
+  span[data-radix-checkbox],
+  button[data-radix-checkbox] {
+    width: 16px !important;
+    height: 16px !important;
     flex-shrink: 0 !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
   }
   
-  @media (min-width: 640px) {
-    [data-radix-checkbox] {
+  /* Override any Tailwind size classes for checkboxes */
+  .h-4.w-4[data-radix-checkbox],
+  .h-5.w-5[data-radix-checkbox],
+  .h-6.w-6[data-radix-checkbox] {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+  }
+  
+  /* Ensure checkbox indicator is properly sized */
+  [data-radix-checkbox] svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  /* Mobile-specific checkbox sizing */
+  @media (max-width: 640px) {
+    div[data-radix-checkbox],
+    span[data-radix-checkbox],
+    button[data-radix-checkbox] {
       width: 16px !important;
       height: 16px !important;
+      max-width: 16px !important;
+      max-height: 16px !important;
     }
   }
   
-  /* Better mobile spacing for forms */
+  /* Improve form spacing on mobile */
   @media (max-width: 640px) {
     .space-y-2 > * + * {
       margin-top: 0.75rem;
@@ -105,14 +130,7 @@
     .space-y-5 > * + * {
       margin-top: 1.5rem;
     }
-    
-    /* Better checkbox alignment on mobile */
-    .flex.items-start > [data-radix-checkbox] {
-      margin-top: 0.125rem;
-    }
   }
-  
-
 }
 
 @layer utilities {

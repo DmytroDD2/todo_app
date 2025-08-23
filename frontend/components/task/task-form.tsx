@@ -155,14 +155,13 @@ export default function TaskForm({ task, editingTask, onSubmit, onCancel, isLoad
         />
       </div>
 
-      <div className="flex items-center space-x-4 sm:space-x-3">
+      <div className="flex items-center space-x-2">
         <Checkbox
           id="is_completed"
           checked={formData.is_completed || false}
           onCheckedChange={(checked) => handleChange('is_completed', checked)}
-          className="flex-shrink-0 touch-manipulation"
         />
-        <Label htmlFor="is_completed" className="text-base sm:text-sm">Mark as completed</Label>
+        <Label htmlFor="is_completed">Mark as completed</Label>
       </div>
 
       <div className="flex gap-2 pt-4">
