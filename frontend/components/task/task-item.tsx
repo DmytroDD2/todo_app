@@ -16,13 +16,13 @@ interface TaskItemProps {
 export default function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
   return (
     <div className={cn(
-      "flex items-start gap-3 p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow",
+      "flex items-start gap-4 sm:gap-3 p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow",
       task.completed && "bg-gray-50 dark:bg-gray-700 opacity-75"
     )}>
       <Checkbox
         checked={task.completed}
         onCheckedChange={onToggle}
-        className="mt-1"
+        className="mt-1 flex-shrink-0 touch-manipulation"
       />
       
       <div className="flex-1 min-w-0">

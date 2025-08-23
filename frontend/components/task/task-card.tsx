@@ -48,11 +48,11 @@ export default function TaskCard({
         </div>
       )}
       
-      <div className="flex items-start gap-3">
+      <div className="flex items-start gap-4 sm:gap-3">
         <Checkbox
           checked={task.completed}
           onCheckedChange={() => onToggle(task.id)}
-          className="mt-1"
+          className="mt-1 flex-shrink-0 touch-manipulation"
         />
         
         <div className="flex-1 min-w-0">

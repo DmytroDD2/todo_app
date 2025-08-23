@@ -68,7 +68,27 @@
     min-width: 44px;
   }
   
-  /* Improve form spacing on mobile */
+  /* Exclude checkboxes from touch target rules */
+  [data-radix-checkbox] {
+    min-height: unset !important;
+    min-width: unset !important;
+  }
+  
+  /* Ensure checkboxes have proper sizing */
+  [data-radix-checkbox] {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  @media (min-width: 640px) {
+    [data-radix-checkbox] {
+      width: 16px !important;
+      height: 16px !important;
+    }
+  }
+  
+  /* Better mobile spacing for forms */
   @media (max-width: 640px) {
     .space-y-2 > * + * {
       margin-top: 0.75rem;
@@ -85,7 +105,14 @@
     .space-y-5 > * + * {
       margin-top: 1.5rem;
     }
+    
+    /* Better checkbox alignment on mobile */
+    .flex.items-start > [data-radix-checkbox] {
+      margin-top: 0.125rem;
+    }
   }
+  
+
 }
 
 @layer utilities {
