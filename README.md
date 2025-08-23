@@ -46,20 +46,37 @@ todo_app/
 │   │   ├── crud/          # Database operations
 │   │   └── main.py        # FastAPI app
 │   ├── requirements.txt
+│   ├── runtime.txt         # Python runtime specification
+│   ├── test_auth.py       # Authentication tests
 │   └── alembic/           # Database migrations
+│       └── versions/       # Migration version files
 ├── frontend/              # Next.js frontend
 │   ├── app/              # Next.js App Router
+│   │   ├── (auth)/       # Protected route group
+│   │   ├── (public)/     # Public route group
+│   │   ├── globals.css   # Global styles
+│   │   └── layout.tsx    # Root layout
 │   ├── components/       # React components
 │   │   ├── auth/        # Authentication components
 │   │   ├── task/        # Task management components
 │   │   ├── category/    # Category management components
 │   │   ├── features/    # Advanced features (statistics, calendar)
+│   │   ├── layout/      # Layout components
+│   │   ├── providers/   # Context providers
 │   │   └── ui/          # Reusable UI components
 │   ├── hooks/           # Custom React hooks
+│   │   ├── category/    # Category-related hooks
+│   │   └── task/        # Task-related hooks
 │   ├── lib/             # Utilities and configs
 │   ├── types/           # TypeScript types
-│   └── package.json
+│   ├── package.json
+│   ├── next.config.js   # Next.js configuration
+│   ├── postcss.config.js # PostCSS configuration
+│   ├── tailwind.config.js # Tailwind CSS configuration
+│   ├── tsconfig.json    # TypeScript configuration
+│   └── next-env.d.ts    # Next.js TypeScript definitions
 ├── docs/                 # Additional documentation
+├── setup.sh             # Setup script
 └── README.md
 ```
 
